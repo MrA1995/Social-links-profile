@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* Color */
+    --Color-Grey-900: #141414;
+    --Color-Grey-800: #1F1F1F;
+    --Color-Grey-700: #333333;
+    --Color-Green: #C4F82A;
+    --Color-White: #FFFFFF;
+
+    /* Typography */
+    --Fsize-Text-Preset-01: 1.71rem;
+    --Fsize-Text-Preset-02: 0.9rem;
+    --Fsize-Text-Preset-02-bold: 1rem;
+    --Line-Height: 1.35em;
+
+    /* Spacing */
+    --Spacing-500-40px: 2.85rem;
+    --Spacing-300-24px: 1.5rem;
+    --Spacing-150-12px: 0.85rem;
+    --Spacing-50-4px: 0.25rem;
+
+    /* Font */
+    --Font-Family: "Inter", sans-serif;
+
+    /* Display */
+    --Width-Desktop: 1440px;
+    --Width-Mobile: 375px;
+    --border-radius: 12px;
+    --time-transition: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--Font-Family);
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Color-Grey-900);
+    color: var(--Color-White);
+    overflow: none;
+}
+
+.profile-name, .profile-job, .profile-social-link {
+    margin-top: var(--Spacing-300-24px);
+}
+
+.profile-address {
+    margin-top: var(--Spacing-50-4px);
+}
+
+.card-profile {
+    width: 24.5em;
+    height: fit-content;
+    background-color: var(--Color-Grey-800);
+    padding: calc(var(--Spacing-500-40px)/1.19) var(--Spacing-500-40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8vh auto;
+    border-radius: var(--border-radius);
+}
+
+.profile-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.profile-image {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: var(--Fsize-Text-Preset-01);
+    font-weight: bold;
+    line-height: var(--Line-Height);
+    text-align: center;
+}
+
+.profile-address {
+    font-size: var(--Fsize-Text-Preset-02);
+    font-weight: normal;
+    color: var(--Color-Green);
+    line-height: var(--Line-Height);
+    text-align: center;
+}
+
+.profile-job {
+    color: var(--Color-White);
+    font-size: var(--Fsize-Text-Preset-02);
+    font-weight: normal;
+    line-height: var(--Line-Height);
+    text-align: center;
+}
+
+.profile-social-link {
+    width: 100%;
+    height: fit-content;
+}
+
+.item-social-link {
+    width: 20em;
+    height: fit-content;
+    list-style-type: none;
+    text-align: center;
+    background-color: var(--Color-Grey-700);
+    padding: var(--Spacing-150-12px) 0;
+    margin: 0 0 1rem 0;
+    border-radius: var(--border-radius);
+    transition: all var(--time-transition) ease-in-out;
+}
+
+.item-social-link:last-child {
+    margin-bottom: 0;
+}
+
+.item-social-link:hover {
+    background-color: var(--Color-Green);
+}
+
+.social-link {
+    width: 100%;
+    height: fit-content;
+    color: var(--Color-White);
+    text-decoration: none;
+    font-size: var(--Fsize-Text-Preset-02-bold);
+    font-weight: bold;
+    transition: all var(--time-transition) ease-in-out;
+}
+
+.item-social-link:hover .social-link {
+    color: var(--Color-Grey-900);
+}
+
+.attribution { 
+    font-size: 0.79rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 1440px) and (min-width: 375px) {
+    .card-profile {
+        width: 350px;
+    }
+}
+
+@media (max-width: 374px) {
+    .card-profile {
+        width: 375px;
+    }
+}
